@@ -1,74 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Exercicio 4d</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f5f5f5;
-      padding-top: 40px;
-    }
-    .titulo {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
-    .card-exercicio {
-      max-width: 650px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    #resultado {
-      font-family: Georgia, 'Times New Roman', serif;
-      margin-top: 20px;
-    }
-    .imagem-exercicio {
-      width: 100%;
-      max-width: 130px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4.d</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-
-  <div class="card-exercicio">
-    <h2 class="titulo">Programa Lados de um Triângulo</h2>
-
-    <div class="row align-items-center">
-      <div class="col-4 text-center">
-        <img src="imagens/exerc.jpg" alt="Ilustração" class="imagem-exercicio">
-      </div>
-      <div class="col-8">
-        <div class="mb-3 row align-items-center">
-          <label for="ladoA" class="col-sm-4 col-form-label">Lado A:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="ladoA" value="8">
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="imagens/exerc.jpg" alt="triangulo" class="img-fluid">
+            </div>
+            <div class="col-8">
+                <h1>Programa Lados de um Triângulo</h1>
+                <hr>
+                <form id="frmTriangulo">
+                    <p>Lado A:
+                        <input type="number" id="ladoA" step="0.01" required>
+                    </p>
+                    <p>Lado B:
+                        <input type="number" id="ladoB" step="0.01" required>
+                    </p>
+                    <p>Lado C:
+                        <input type="number" id="ladoC" step="0.01" required>
+                    </p>
+                    <input type="submit" value="Verificar Lados" class="btn btn-success">
+                </form>
+                <p>&nbsp;</p>
+                <h3 id="outFormacao"></h3>
+                <h3 id="outTipo"></h3>
+            </div>
         </div>
-
-        <div class="mb-3 row align-items-center">
-          <label for="ladoB" class="col-sm-4 col-form-label">Lado B:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="ladoB" value="10">
-          </div>
-        </div>
-
-        <div class="mb-3 row align-items-center">
-          <label for="ladoC" class="col-sm-4 col-form-label">Lado C:</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="ladoC" value="8">
-          </div>
-        </div>
-
-        <button class="btn btn-outline-secondary btn-sm" onclick="verificar()">Verificar Lados</button>
-
-        <p id="resultado" class="fw-bold"></p>
-      </div>
     </div>
-  </div>
-  <script src="js/exerD.js"></script>
+    <script src="js/exerD.js"></script>
 </body>
 </html>

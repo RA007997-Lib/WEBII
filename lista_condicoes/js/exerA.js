@@ -1,20 +1,14 @@
-function verificar() {
+const form = document.querySelector("form");
+const resp = document.querySelector("#outResposta");
 
-    const numero = parseInt(document.getElementById('numero').value);
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Impede o envio do formulário e recarregamento da página
 
-    const resultado = document.getElementById('resultado');
-
-    
-    let mensagem;
+    const numero = Number(form.inNumero.value);
 
     if (numero % 2 === 0) {
-        mensagem = numero + " é par";
+        resp.innerText = `${numero} é Par`;
     } else {
-        mensagem = numero + " é ímpar";
+        resp.innerText = `${numero} é Ímpar`;
     }
-
-    resultado.textContent = mensagem;
-}
-
-
-verificar();
+});
